@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+<head>
+<link rel="icon" href="J.png" type="image/png">
+</head>
+  {% block container%}
+          <button class="btn btn-primary" id="addidea" type="button" > <a href="questions/askquestion" class="anchor2">+ Newidea</a></button><br>
+          {%for post in posts %}
+          <hr>
+          <a href="questions/{{post.qid}}" class="question">{{post.question_title}}</a>
+          <br>
+          Posted by <strong>{{post.posted_by}}</strong> on {{post.date_posted}}
+          <hr>
+          {% endfor %}
+        </div>
+      
+  {%endblock%}

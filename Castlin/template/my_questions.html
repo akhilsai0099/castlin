@@ -1,0 +1,38 @@
+<style>
+    .pie{
+        display: inline-block;
+    }
+</style>
+{% extends 'base.html'%}
+
+{% block title%}My Questions{% endblock%}
+
+{% if not questions_exist %}
+
+{% block body%}
+{% endblock %}
+{% endif %}
+
+<div class="pie">
+    {% block container %}
+
+    {% for post in posts %}
+    <hr><div class="order">
+        <a href="/questions/{{post.qid}}" class="question">{{post.question_title}}</a>
+        <button type="button" class="btn btn-danger v2"><a href="/questions/deleteQuestion/{{post.qid}}" class="anchor2">Delete</a></button>
+        <button type="button" class="btn btn-secondary v1" id="v1"><a href="/questions/editQuestion/{{post.qid}}" class="anchor2">Edit</a></button>
+    </div>
+
+
+    <br>
+    <hr>
+    {%endfor%}  
+    {% if not questions_exist %}
+    <br><br><br><br><br><br><br>
+    <center> <h4>You haven't asked any questions yet.</p></center>
+        <br><br><br><br><br><br><br>
+    {% endif %}
+
+    {%endblock%}
+
+</div>

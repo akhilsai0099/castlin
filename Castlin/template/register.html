@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'j.png' %}" type="image/png">
+    <style>
+        body {
+            background-color: #ebeff5;
+          }
+
+        
+    </style>
+</head>
+<body>
+    <center><h1 style="color: grey; margin-top:10px;">Register Now!!!</h1></center>
+    <div class="register">
+        <form action="register" method="POST" >
+            {% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="username"  placeholder="Username..." autocomplete="OFF"><br>
+            <p>E-mail</p>
+            <input type="email" name="email"  placeholder="Enter Your Email..." autocomplete="OFF"><br>
+            <p>Password</p>
+            <input type="password" name="password1"  placeholder="Enter Your Password"><br>
+            <p>Confirm Password</p>
+            <input type="password" name="password2"  placeholder="Confirm Password"><br>
+            <input type="submit" name="submit" >
+            <p> <a href="login" class="anchor">Have an account already??</a> </p>
+
+        </form>
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

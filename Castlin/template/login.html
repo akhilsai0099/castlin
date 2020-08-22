@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'j.png' %}" type="image/png">
+
+</head>
+
+<body>
+    <center>
+        <h1>login</h1>
+    </center>
+    <div class="register">
+
+        <form action="login" method="POST">
+            {%csrf_token%}
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter your Username" autocomplete="OFF">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter your password">
+            <input type="submit" name="submit">
+        </form>
+        <p>Didn't have an account already? <a href="/accounts/register" class="anchor">create one here</a> </p>
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+</body>
+
+</html>

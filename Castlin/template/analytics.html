@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% if not questions_exist %}
+<br><br><br><br><br><br><br>
+<center> <h4>You haven't asked any questions yet.</p></center>
+    <br><br><br><br><br><br><br>
+{% else %}
+
+{% block container %}
+<div style="padding-left: -45px;" class = "container"><img src="data:image/png;base64,{{ data }}" alt="" height="350" ,width="500"></div>
+{%endblock%}
+{% endif %}

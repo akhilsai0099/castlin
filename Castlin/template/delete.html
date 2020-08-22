@@ -1,0 +1,21 @@
+<style>
+    #inp{
+        width: 100px;
+    }
+    
+</style>
+{% extends 'base.html'%}
+
+{% block title%}Delete{% endblock%}
+
+{% block container %}
+    <p>Are you sure to delete <h5>{{question}}</h5></p><br>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <a href="/">Cancel</a>
+        <input type="submit" name="confirm" value="confirm" id="inp">
+
+    </form>
+{% endblock %}

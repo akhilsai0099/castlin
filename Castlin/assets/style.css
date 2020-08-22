@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-family: 'Product Sans Regular';
+}
+
+form {
+    align-content: center;
+}
+
+div.register{
+    height: 480px;
+	width: 320px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-20%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 6px;
+}
+
+.register input {
+	width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.register input[type="text"] , input[type="password"], input[type='email'] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.register input[type="submit"]{
+	outline: none;
+	border: none;
+	height: 40px;
+	background: #1c8adb;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.register input[type="text"]:hover , input[type="password"]:hover, input[type='email']:hover {
+	cursor: pointer;
+	background: #fff;
+    color: #000;
+    transition: linear;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.register input[type="submit"]:hover {
+	cursor: pointer;
+	background: #39dc79;
+	color: #000;
+}
+
+
+body{
+	background-color: #ebeff5;
+  }
+
+  #container{
+	background-color: white;
+	position: relative;
+	width: 850px;
+  
+  }
+
+  #addidea{
+	position: relative;
+	float: right;
+	margin-right: 0px;
+  }
+
+  
+/*for the anchor tags*/
+.question{
+  text-decoration: none;
+  color: rgb(109, 104, 104);
+}
+
+.question:hover{
+  text-decoration: none;
+  color: rgb(109, 104, 104);
+  font-weight: 700;
+}
+.anchor1{
+  text-decoration: none;
+}
+.anchor1:hover{
+  text-decoration: none;
+}
+
+.anchor{	
+	color: #ffffff;
+  }
+
+  .v2{
+	position: absolute;
+	right: 0px;
+}
+
+.v1{
+	position: absolute;
+	right: 80px;
+}
+
+.my-question{
+	max-width: 75px;
+}
+
+.order{
+	position: relative;
+}
+
+.anchor2{
+	color: #ffffff;
+	
+}
+
+.anchor2:hover{
+	color: #ffffff;
+	text-decoration: none;       
+}
+
+/*end for anchor tags*/
+
+/*Responsive ui*/
+
+ @media (max-width : 576px) {
+	
+	#container {
+		position: absolute;
+		width: 100vw;
+	}
+} 

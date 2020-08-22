@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+
+{% block container %}
+
+
+<h5>{{question.question_title}} </h5>
+<h6>{{question.question_text}}</h6>
+<p>Posted by <strong>{{question.posted_by}}</strong> on {{question.date_posted}}</p>
+<hr>
+<p>
+  {% for answer in answers %}
+  {{answer.answer_text}} <br>
+  Answered by <strong>{{answer.posted_by}}</strong> on {{answer.date_posted}}
+  <hr>
+  <br>
+  {% endfor %}
+
+</p>
+
+{%if user.is_authenticated%}
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <textarea class="form-control" id="text" name="desc" rows="7" placeholder="Type your answer here." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+{% else%}
+  <p><a href="/accounts/login" class="anchor1">Log in to answer this question</a></p>
+{% endif %}
+
+{%endblock%}  
