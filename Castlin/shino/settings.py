@@ -26,7 +26,7 @@ SECRET_KEY = 'eg5frqif0^*kmp$(0ea@omk=#o-a_*nr0d75$50bbmchtzn-i_'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1','simpleqna', '192.168.43.198', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1','castlin1.herokuapp.com']
 
 
 # Application definition
